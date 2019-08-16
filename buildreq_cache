@@ -1,0 +1,13 @@
+0.10
+glib-dev
+json-glib-dev
+pkgconfig(check)
+pkgconfig(glib-2.0)
+pkgconfig(json-glib-1.0)
+pkgconfig(libevdev)
+pkgconfig(libudev)
+pkgconfig(python3)
+pkgconfig(python3-embed)
+python3-dev
+swig
+valgrind
