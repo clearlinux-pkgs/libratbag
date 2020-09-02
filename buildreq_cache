@@ -1,4 +1,4 @@
-0.10
+0.14
 glib-dev
 json-glib-dev
 pkgconfig(check)
@@ -6,8 +6,7 @@ pkgconfig(glib-2.0)
 pkgconfig(json-glib-1.0)
 pkgconfig(libevdev)
 pkgconfig(libudev)
-pkgconfig(python3)
-pkgconfig(python3-embed)
+pkgconfig(python-3.8-embed)
 python3-dev
 swig
 valgrind

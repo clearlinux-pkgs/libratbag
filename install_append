@@ -1,4 +1,0 @@
-pushd %{buildroot}/usr/share/libratbag
-mv "logitech-g9x-[Call-of-Duty-MW3-Edition].device" "logitech-g9x-Call-of-Duty-MW3-Edition.device"
-mv "logitech-g9x-[Original].device" "logitech-g9x-Original.device"
-popd
