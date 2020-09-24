@@ -4,7 +4,7 @@
 #
 Name     : libratbag
 Version  : 0.14
-Release  : 2
+Release  : 3
 URL      : https://github.com/libratbag/libratbag/archive/v0.14/libratbag-0.14.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.14/libratbag-0.14.tar.gz
 Summary  : No detailed summary available
