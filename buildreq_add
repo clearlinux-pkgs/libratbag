@@ -1,5 +1,10 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+evdev
+glib-dev
+json-glib-dev
 libunistring-dev
 pygobject
-evdev
+python3-dev
+swig
+valgrind
