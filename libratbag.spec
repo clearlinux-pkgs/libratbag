@@ -4,7 +4,7 @@
 #
 Name     : libratbag
 Version  : 0.15
-Release  : 7
+Release  : 8
 URL      : https://github.com/libratbag/libratbag/archive/v0.15/libratbag-0.15.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.15/libratbag-0.15.tar.gz
 Summary  : No detailed summary available
@@ -111,7 +111,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1607976066
+export SOURCE_DATE_EPOCH=1607984879
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
