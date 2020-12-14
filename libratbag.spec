@@ -4,7 +4,7 @@
 #
 Name     : libratbag
 Version  : 0.15
-Release  : 6
+Release  : 7
 URL      : https://github.com/libratbag/libratbag/archive/v0.15/libratbag-0.15.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.15/libratbag-0.15.tar.gz
 Summary  : No detailed summary available
