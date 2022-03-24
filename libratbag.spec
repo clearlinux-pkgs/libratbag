@@ -4,7 +4,7 @@
 #
 Name     : libratbag
 Version  : 0.16
-Release  : 10
+Release  : 11
 URL      : https://github.com/libratbag/libratbag/archive/v0.16/libratbag-0.16.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.16/libratbag-0.16.tar.gz
 Summary  : No detailed summary available
@@ -17,7 +17,6 @@ Requires: libratbag-license = %{version}-%{release}
 Requires: libratbag-man = %{version}-%{release}
 Requires: libratbag-services = %{version}-%{release}
 BuildRequires : buildreq-meson
-BuildRequires : evdev
 BuildRequires : glib-dev
 BuildRequires : json-glib-dev
 BuildRequires : libunistring-dev
@@ -27,6 +26,7 @@ BuildRequires : pkgconfig(json-glib-1.0)
 BuildRequires : pkgconfig(libevdev)
 BuildRequires : pkgconfig(libudev)
 BuildRequires : pygobject
+BuildRequires : pypi(evdev)
 BuildRequires : python3-dev
 BuildRequires : swig
 BuildRequires : valgrind
@@ -111,15 +111,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1624581465
+export SOURCE_DATE_EPOCH=1648157896
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain   builddir
 ninja -v -C builddir
 
@@ -128,7 +128,7 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-meson test -C builddir || :
+meson test -C builddir --print-errorlogs || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/libratbag

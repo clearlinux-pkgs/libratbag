@@ -1,6 +1,6 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-evdev
+pypi(evdev)
 glib-dev
 json-glib-dev
 libunistring-dev
