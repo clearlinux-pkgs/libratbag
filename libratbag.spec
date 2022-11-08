@@ -4,7 +4,7 @@
 #
 Name     : libratbag
 Version  : 0.16
-Release  : 12
+Release  : 13
 URL      : https://github.com/libratbag/libratbag/archive/v0.16/libratbag-0.16.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.16/libratbag-0.16.tar.gz
 Summary  : No detailed summary available
