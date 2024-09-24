@@ -1,0 +1,4 @@
+mkdir -p %{buildroot}/usr/bin
+for f in %{buildroot}/usr/sbin/*; do
+	mv "$f" %{buildroot}/usr/bin/
+done

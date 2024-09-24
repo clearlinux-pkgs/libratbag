@@ -7,7 +7,7 @@
 #
 Name     : libratbag
 Version  : 0.18
-Release  : 18
+Release  : 19
 URL      : https://github.com/libratbag/libratbag/archive/v0.18/libratbag-0.18.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.18/libratbag-0.18.tar.gz
 Summary  : No detailed summary available
@@ -121,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1727221875
+export SOURCE_DATE_EPOCH=1727222314
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -174,6 +174,12 @@ GOAMD64=v3
 DESTDIR=%{buildroot}-v3 ninja -C builddiravx2 install
 GOAMD64=v2
 DESTDIR=%{buildroot} ninja -C builddir install
+## install_append content
+mkdir -p %{buildroot}/usr/bin
+for f in %{buildroot}/usr/sbin/*; do
+mv "$f" %{buildroot}/usr/bin/
+done
+## install_append end
 /usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
@@ -185,7 +191,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /V3/usr/bin/ratbagd
 /usr/bin/lur-command
 /usr/bin/ratbagctl
-/usr/sbin/ratbagd
+/usr/bin/ratbagd
 
 %files data
 %defattr(-,root,root,-)
