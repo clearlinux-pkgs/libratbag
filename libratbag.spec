@@ -7,7 +7,7 @@
 #
 Name     : libratbag
 Version  : 0.18
-Release  : 19
+Release  : 20
 URL      : https://github.com/libratbag/libratbag/archive/v0.18/libratbag-0.18.tar.gz
 Source0  : https://github.com/libratbag/libratbag/archive/v0.18/libratbag-0.18.tar.gz
 Summary  : No detailed summary available
